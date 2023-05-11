@@ -4,12 +4,12 @@ A collection of technical information and resources for the Mega Duck console.
 ## Software
 
 ### Emulators
-- MAME
-- SameDuck (modified version of SameBoy)
+- [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
+- [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
 
 ### Development Tools
-- GBDK-2020:  (supports Mega Duck as a build target)
-- hUGE Driver: Port of this music driver to the Mega Duck
+- [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
+- [hUGE Driver](https://github.com/bbbbbr/hUGEDriver): Port of this music driver to the Mega Duck
 - CBTFX: Port of this sound effects driver to the Mega Duck
 
 ### Homebrew Games
