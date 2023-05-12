@@ -63,7 +63,7 @@ These changes should be kept in mind when porting Sound Effects and Music Driver
     - `Mega Duck: Bits:6..5 : 00 = mute, 01 = 25%,  10 = 50%, 11 = 100%`
     - To maintain compatibility witht he Game Boy the value to write (or the value read) can be converted this way: `(((~(uint8_t)value) + (uint8_t)0x20u) & (uint8_t)0x60u)`
 
-### Table of Sound Register Changes
+### Sound Register Changes Table
 - `Addr Change` means deviation from the expected linear incrementing register address order per sound channel that the Game Boy registers follow. The shuffled order on the Mega Duck can break assumptions in Game Boy sound drivers which attempt to write each channel as a sequential block using an incrementing register pointer.
 
 | Reg  | Alt Name   | Game Boy | Mega Duck | Data Change        | Addr Change |
@@ -108,7 +108,7 @@ These changes should be kept in mind when porting Sound Effects and Music Driver
 | LCDCF_B_OBJON   | .1       | .0        |        | Bit for Sprites Display Visible/Hidden Select    |
 | LCDCF_B_BGON    | .0       | .6        |        | Bit for Background Display Visible Hidden Select |
 
-### Detailed Register Address Changes
+### Graphics Register Address Changes
 
 | Register | Game Boy | Mega Duck |
 | -------- | -------- | --------- |
