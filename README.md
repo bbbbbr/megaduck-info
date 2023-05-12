@@ -1,6 +1,8 @@
 # Mega Duck / Cougar Boy Console Info
 A collection of technical information and resources for the Mega Duck console.
 
+[Web version](https://bbbbbr.github.io/megaduck-info/)
+
 # Software
 
 ### Emulators
