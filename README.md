@@ -1,7 +1,7 @@
 # Mega Duck / Cougar Boy Console Info
 A collection of technical information and resources for the Mega Duck console.
 
-## Software
+# Software
 
 ### Emulators
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
@@ -9,13 +9,16 @@ A collection of technical information and resources for the Mega Duck console.
 
 ### Development Tools
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
-- [hUGE Driver](https://github.com/bbbbbr/hUGEDriver): Port of this music driver to the Mega Duck
-- [CBT-FX](https://github.com/bbbbbr/CBT-FX): Port of the CBT-FX sound effects driver to the Mega Duck
+- [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
+- [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 
 ### Homebrew Games
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
-## Hardware
+### ROM Patches
+- ROM patch for [Tetris](https://github.com/bbbbbr/megaduck-tetris-patch) so it runs on the Mega Duck
+
+# Hardware
 
 ### Flash Cartridges
 - [A2 Heaven multi-flash cart](http://www.a2heaven.com/webshop/index.php?rt=product/product&product_id=172)
@@ -27,7 +30,7 @@ A collection of technical information and resources for the Mega Duck console.
 #### Cartridge Pinout
 
 
-## Porting from Game Boy to Mega Duck
+# Porting from Game Boy to Mega Duck
 Programming for the Mega Duck is mostly identical (cpu & integrated peripherals) to the Original Game Boy though it has a couple changes listed below.
 
 Register and flag names will mostly follow those in the Game Boy dev `hardware.inc`, but may have some GBDK-isms.
