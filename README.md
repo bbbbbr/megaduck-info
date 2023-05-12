@@ -1,4 +1,4 @@
-# Mega Duck Info
+# Mega Duck / Cougar Boy Console Info
 A collection of technical information and resources for the Mega Duck console.
 
 ## Software
@@ -10,31 +10,30 @@ A collection of technical information and resources for the Mega Duck console.
 ### Development Tools
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
 - [hUGE Driver](https://github.com/bbbbbr/hUGEDriver): Port of this music driver to the Mega Duck
-- CBTFX: Port of this sound effects driver to the Mega Duck
+- [CBT-FX](https://github.com/bbbbbr/CBT-FX): Port of the CBT-FX sound effects driver to the Mega Duck
 
 ### Homebrew Games
-- itch.io
-- 
+- [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
 ## Hardware
 
-### Flash Carts
-- A2 Heaven
-- Inside Gadgets
-- 3D Printable cartridge shell
+### Flash Cartridges
+- [A2 Heaven multi-flash cart](http://www.a2heaven.com/webshop/index.php?rt=product/product&product_id=172)
+- [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
+- [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
 #### LCD Header
 #### Serial Link Port
 #### Cartridge Pinout
 
 
-## From Game Boy to Mega Duck / Cougar Boy
+## Porting from Game Boy to Mega Duck
 The Mega Duck is (for practical purposes) functionally identical to the Original Game Boy though it has a couple changes listed below.
 
 ### Summary of Hardware changes versus the Game Boy:
   - Cartridge Boot Logo: not present on Mega Duck
   - Cartridge Header data: not present on Mega Duck
-    - Checksum header: not present on Mega Duck- do not apply after building as on the Game Boy
+    - Checksum header: not present on Mega Duck. * Do not * apply checksum to ROM after building as on the Game Boy
   - Program Entry Point: `0x0000` (on Game Boy: `0x0100` )
   - Display registers and flag definitions: Some changed
   - Audio registers and flag definitions: Some changed (See Soung Register Changes)
