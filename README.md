@@ -18,7 +18,8 @@ A collection of technical information and resources for the Mega Duck console.
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
 ### ROM Patches
-- ROM patch for [Tetris](https://github.com/bbbbbr/megaduck-tetris-patch) so it runs on the Mega Duck
+- [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
+- [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris so it runs on the Mega Duck
 
 # Hardware
 
