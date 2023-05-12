@@ -15,6 +15,7 @@ A collection of technical information and resources for the Mega Duck console.
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 
 ### Homebrew Games
+- Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
 ### ROM Patches
