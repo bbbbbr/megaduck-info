@@ -42,6 +42,8 @@ Register and flag names will mostly follow those in the Game Boy dev `hardware.i
 Most of this research was done by others, I've only added a small amount.
 
 ### Summary of Hardware changes versus the Game Boy:
+  - Different cartridge pinout / connector
+  - Different serial link port connector
   - Cartridge Boot Logo: not present on Mega Duck
   - Cartridge Header data: not present on Mega Duck
     - Checksum header: not present on Mega Duck. **Do not apply checksum to ROM** after building as on the Game Boy
