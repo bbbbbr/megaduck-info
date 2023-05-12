@@ -37,6 +37,8 @@ Programming for the Mega Duck is mostly identical (cpu & integrated peripherals)
 
 Register and flag names will mostly follow those in the Game Boy dev `hardware.inc`, but may have some GBDK-isms.
 
+Most of this research was done by others, I've only added a small amount.
+
 ### Summary of Hardware changes versus the Game Boy:
   - Cartridge Boot Logo: not present on Mega Duck
   - Cartridge Header data: not present on Mega Duck
