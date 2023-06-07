@@ -29,7 +29,8 @@ A collection of technical information and resources for the Mega Duck console.
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
-#### LCD Header
+#### Display mod / LCD Header info
+* [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
 #### Serial Link Port
 #### Cartridge Pinout
 
