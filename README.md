@@ -30,8 +30,11 @@ A collection of technical information and resources for the Mega Duck console.
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
 #### Display mod / LCD Header info
-* [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
+- [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
+
 #### Serial Link Port
+- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports.
+- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
 #### Cartridge Pinout
 
 
