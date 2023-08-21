@@ -21,6 +21,7 @@ A collection of technical information and resources for the Mega Duck console.
 ### ROM Patches
 - [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
 - [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris so it runs on the Mega Duck
+- [Patch](https://bbbbbr.itch.io/megaduck-patch-fydos-magic-tiles) for Game Boy [Fydo's Magic Tiles](https://ohnotomsutton.itch.io/fydos-magic-tiles)
 
 # Hardware
 
