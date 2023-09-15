@@ -16,6 +16,7 @@ A collection of technical information and resources for the Mega Duck console.
 
 ### Homebrew Games
 - Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
+  - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
 ### ROM Patches
