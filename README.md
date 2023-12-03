@@ -1,5 +1,8 @@
 # Mega Duck / Cougar Boy Console Info
-A collection of technical information and resources for the Mega Duck console.
+A collection of technical information and resources for the Mega Duck console brought together in one place.
+
+## References
+...
 
 [Web version](https://bbbbbr.github.io/megaduck-info/)
 
@@ -13,6 +16,7 @@ A collection of technical information and resources for the Mega Duck console.
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
+- [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. 
 
 ### Homebrew Games
 - Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
@@ -38,21 +42,27 @@ A collection of technical information and resources for the Mega Duck console.
 #### Serial Link Port
 - The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports.
 - The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
-#### Cartridge Pinout
 
+#### Cartridge Pinout
+- TODO
+
+# System ROMs
+- Handheld Model: No System/Boot ROM
+- CEFA Toys Super Quique Laptop Model: [Partial disassembly of the System ROM](https://github.com/bbbbbr/megaduck-quique-disasm/)
+- Hartung Super Junior Computer: ...
 
 # Porting from Game Boy to Mega Duck
-Programming for the Mega Duck is mostly identical (cpu & integrated peripherals) to the Original Game Boy though it has a couple changes listed below.
+Developing for the Mega Duck is mostly identical (cpu & integrated peripherals) to the Original Game Boy though it has a couple changes listed below.
 
 Register and flag names will mostly follow those in the Game Boy dev `hardware.inc`, but may have some GBDK-isms.
 
-Most of this research was done by others, I've only added a small amount.
+Most of this research was done by others, I've added a small amount.
 
 ### Summary of Hardware changes versus the Game Boy:
 
 Physical / Hardware:
   - Different cartridge pinout / connector
-  - Different serial link port connector
+  - Different serial link port connector shape
 
 Programming:
   - No Boot ROM
@@ -63,6 +73,7 @@ Programming:
   - Display registers address and flag definitions: Some changed (details below)
   - Audio registers address and flag definitions: Some changed (details below)
   - MBC ROM bank switching register address: `0x0001` (many Game Boy MBCs use `0x2000 - 0x3FFF`)
+    - TODO: Laptop model system ROM
 
 
 ### Sound Register Value/Data Changes
