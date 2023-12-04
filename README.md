@@ -8,12 +8,14 @@ A collection of technical information and resources for the Mega Duck console br
 
 # Software
 
-### Emulators
+### Emulators/FPGA Re-implementations
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
 - [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
+- [MISTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168) at present the only one with all known audio register changes integrated, so that music and sfx play correctly
 
 ### Development Tools
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
+- [hardware.inc for MegaDuck](https://github.com/bbbbbr/hUGEDriver/blob/uncap_megaduck/include/hardware.inc): Hardware constants and addresses for use with asm/RGBDS.
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 - [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. 
