@@ -46,7 +46,7 @@ A collection of technical information and resources for the Mega Duck console br
 - The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
 
 #### Cartridge Pinout
-- TODO
+- [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
 
 # System ROMs
 - Handheld Model: No System/Boot ROM
