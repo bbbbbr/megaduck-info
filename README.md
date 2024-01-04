@@ -25,6 +25,9 @@ A collection of technical information and resources for the Mega Duck console br
   - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) on itch.io
 
+### Homebrew Music Tools
+- [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
+
 ### ROM Patches
 - [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
 - [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris so it runs on the Mega Duck
