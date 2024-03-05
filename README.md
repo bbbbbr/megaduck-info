@@ -14,10 +14,14 @@ A collection of technical information and resources for the Mega Duck console br
 - [MISTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168) at present the only one with all known audio register changes integrated, so that music and sfx play correctly
 
 ### Development Tools
+#### SDKs / Build related
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
-- [hardware.inc for MegaDuck](https://github.com/bbbbbr/hUGEDriver/blob/uncap_megaduck/include/hardware.inc): Hardware constants and addresses for use with asm/RGBDS.
+- [hardware.inc for MegaDuck](https://github.com/bbbbbr/hUGEDriver/blob/uncap_megaduck/include/hardware.inc): Hardware constants and addresses for use with asm/RGBDS
+  - Newer [hardware.inc](https://github.com/bbbbbr/hUGEDriver/blob/master_megaduck/include/hardware.inc) base version   
+#### Music / SFX
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
+#### Peripherals
 - [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. 
 
 ### Homebrew Games
@@ -45,11 +49,14 @@ A collection of technical information and resources for the Mega Duck console br
 - [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
 
 #### Serial Link Port
-- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports.
+- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
 - The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
 
 #### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
+
+#### AC Adapter for Super QuiQue Laptop
+An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity.
 
 # System ROMs
 - Handheld Model: No System/Boot ROM
