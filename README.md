@@ -56,7 +56,7 @@ A collection of technical information and resources for the Mega Duck console br
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
 
 #### AC Adapter for Super QuiQue Laptop
-An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity.
+- An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity. [Picture](/assets/megaduck_super_quique_laptop_universal_ac_adapter_9v.jpg).
 
 # System ROMs
 - Handheld Model: No System/Boot ROM
