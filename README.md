@@ -52,6 +52,9 @@ A collection of technical information and resources for the Mega Duck console br
 - The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
 - The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
 
+#### MBC Controllers
+- TODO: mbc types, their common extensions (.md1, .md2, .bin), notes on how different emulators select mbcs
+
 #### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
 
