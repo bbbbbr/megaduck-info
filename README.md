@@ -80,12 +80,16 @@ Physical / Hardware:
   - Different serial link port connector shape
 
 Programming:
-  - No Boot ROM
-  - Cartridge Boot Logo: not present on Mega Duck
-  - Cartridge Header data: not present on Mega Duck
-    - Checksum header: not present on Mega Duck. **Do not apply checksum to ROM** after building as on the Game Boy
-  - Program Entry Point: `0x0000` (on Game Boy: `0x0100` )
-  - Display registers address and flag definitions: Some changed (details below)
+ - No Boot ROM
+ - Cartridge Boot Logo: not present on Mega Duck
+ - Cartridge Header data: not present on Mega Duck
+   - Checksum header: not present on Mega Duck. **Do not apply checksum to ROM** after building as on the Game Boy
+ - Program Entry Point: `0x0000` (on Game Boy: `0x0100` )
+ - Display registers address and flag definitions: Some changed (details below)
+ - VRAM data:
+   - The user program should clear it before use.
+   - For Handhelds: since a boot ROM does not run on startup it means Tile Map and Pattern data are not cleared and will have (consistent) random data.
+    - For Laptop models: The System ROM will not clear VRAM before launching a user program from the system menu. The font patterns left in VRAM on program startup can be used to tell the difference between the Super Quique (Spanish) and Super Junior (German) laptop models. See [example code](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples/blob/main/megaduck_keyboard/src/megaduck_model.c).
   - Audio registers address and flag definitions: Some changed (details below)
   - MBC ROM bank switching register address: `0x0001` (many Game Boy MBCs use `0x2000 - 0x3FFF`)
     - TODO: Laptop model system ROM
