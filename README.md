@@ -8,6 +8,13 @@ A collection of technical information and resources for the Mega Duck console br
 
 # Software
 
+### Homebrew Games
+- Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
+  - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
+- [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
+- [SystemofLever's GB Fireplace](https://github.com/bbbbbr/gb_fireplace_megaduck) ported for the MegaDuck
+- [MWehrstedt's Max Pirate](https://github.com/bbbbbr/MaxPirate_megaduck/tree/megaduck/build/duck) ported for the MegaDuck
+
 ### Emulators/FPGA Re-implementations
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
 - [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
@@ -23,12 +30,6 @@ A collection of technical information and resources for the Mega Duck console br
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 #### Peripherals
 - [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. 
-
-### Homebrew Games
-- Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
-  - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
-- [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
-- [SystemofLever's GB Fireplace](https://github.com/bbbbbr/gb_fireplace_megaduck) ported for the MegaDuck
 
 ### Homebrew Music Tools
 - [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
