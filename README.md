@@ -62,6 +62,9 @@ A collection of technical information and resources for the Mega Duck console br
 
 #### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
+- Scans:
+  - OEM (Pile Wonder) [Front](/assets/megaduck_cartridge_oem_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_oem_1200dpi_back.jpg)
+  - IG 32K  [Front](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_back.jpg)
 
 #### AC Adapter for Super QuiQue Laptop
 - An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity. [Picture](/assets/megaduck_super_quique_laptop_universal_ac_adapter_9v.jpg).
