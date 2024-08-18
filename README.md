@@ -42,6 +42,7 @@ A collection of technical information and resources for the Mega Duck console br
 # Hardware
 
 ### Flash Cartridges
+- [Open-source RP2040-based flash cart](https://github.com/zwenergy/picoDuck)
 - [A2 Heaven multi-flash cart](http://www.a2heaven.com/webshop/index.php?rt=product/product&product_id=172)
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
