@@ -18,7 +18,8 @@ A collection of technical information and resources for the Mega Duck console br
 ### Emulators/FPGA Re-implementations
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
 - [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
-- [MISTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168) at present the only one with all known audio register changes integrated, so that music and sfx play correctly
+- [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168) at present the only one with all known audio register changes integrated, so that music and sfx play correctly
+- [Analogue Pocket OpenFPGA core](https://github.com/spiritualized1997/openFPGA-Megaduck)
 
 ### Development Tools
 #### SDKs / Build related
@@ -58,9 +59,45 @@ A collection of technical information and resources for the Mega Duck console br
 - The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
 - The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
 
-#### MBC Controllers
-- TODO: mbc types, their common extensions (.md1, .md2, .bin), notes on how different emulators select mbcs
+#### Bank Switching
 
+#### MBC implementation in emulators
+Game Boy ROMs contain an embedded meta-data header which (usually) indicates the type of MBC (Memory Bank Controller) used. This allows emulators to automatically emulate the correct cart hardware (the Game Boy hardware itself ignores this and doesn't need it since the cart hardware is present). 
+
+OEM Mega Duck ROMs lack this header which means that emulators have to use other methods to infer what type of cart MBC is required by a given ROM.
+
+The main methods for selecting the right MegaDuck cart MBC:
+- By File Extension (`.md1` = 32K banks, `.md2` = Upper 16K Banks, `.bin` = 32k no mbc)
+  - Analogue Pocket OpenFPGA MegaDuck Core
+- By hashes of the ROMs
+  - MAME (partially)
+- By emulating both MBC styles at the same time in case a game uses either. This works since the two MBCs use a different register address.
+  - MAME (partially), MiSTer
+
+#### MBC Controllers
+- Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer)
+  - Register: Bank selected by writing (`0 - 15`) to `0x1000`. * (Bank num starting with 0 needs to be re-checked)
+  - Bank Size/Region: Switches the full 32K ROM region
+  - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
+
+OEM Games:
+- 32K with NO switchable banks
+  - Sometimes with extension: `.bin`, but that may also be used for banked ROMs with some emulators
+  - Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
+- 32K switchable banks
+  - Sometimes with extension: `.md1`
+  - Register: Bank selected by writing `0 - 1` to `0xB000`
+  - Bank Size/Region: Switches the full 32K ROM region
+  - Games: Puppet Knight, Suleiman’s Treasure
+- Upper switchable 16K banks
+  - Sometimes with extension: `.md2`
+  - Register: Bank selected by writing `1 - 3` or `1-7` to `0x0001` depending on total ROM size (64K or 128K)
+  - Bank Size/Region: 16K in the Upper ROM region `0x4000 - 0x7FFF` (lower 16K at `0x0000 - 0x3FFF` is fixed bank 0)
+  - Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
+
+MBC type per game is according to [Reddit](https://www.reddit.com/r/AnaloguePocket/comments/zgmwqh/question_about_the_mega_duck_core_and_rom_file/)
+
+  
 #### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
 - Scans:
