@@ -48,39 +48,15 @@ A collection of technical information and resources for the Mega Duck console br
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
-#### Display mod / LCD Header info
-- [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
-- [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
-
-### Laptop model Gamepad
-- [Info for building a replacement Gamepad / "Mouse"](/docs/Quique_gamepad.md) for the MegaDuck Laptop model
-
-#### Serial Link Port
-- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
-- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
-
-#### Bank Switching
-
-#### MBC implementation in emulators
-Game Boy ROMs contain an embedded meta-data header which (usually) indicates the type of MBC (Memory Bank Controller) used. This allows emulators to automatically emulate the correct cart hardware (the Game Boy hardware itself ignores this and doesn't need it since the cart hardware is present). 
-
-OEM Mega Duck ROMs lack this header which means that emulators have to use other methods to infer what type of cart MBC is required by a given ROM.
-
-The main methods for selecting the right MegaDuck cart MBC:
-- By File Extension (`.md1` = 32K banks, `.md2` = Upper 16K Banks, `.bin` = 32k no mbc)
-  - Analogue Pocket OpenFPGA MegaDuck Core
-- By hashes of the ROMs
-  - MAME (partially)
-- By emulating both MBC styles at the same time in case a game uses either. This works since the two MBCs use a different register address.
-  - MAME (partially), MiSTer
+### MBCs / Bank Switching
 
 #### MBC Controllers
-- Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer)
+**Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer):**
   - Register: Bank selected by writing (`0 - 15`) to `0x1000`. * (Bank num starting with 0 needs to be re-checked)
   - Bank Size/Region: Switches the full 32K ROM region
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
 
-OEM Games:
+**OEM Games:**
 - 32K with NO switchable banks
   - Sometimes with extension: `.bin`, but that may also be used for banked ROMs with some emulators
   - Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
@@ -97,14 +73,38 @@ OEM Games:
 
 MBC type per game is according to [Reddit](https://www.reddit.com/r/AnaloguePocket/comments/zgmwqh/question_about_the_mega_duck_core_and_rom_file/)
 
+#### Implementation in emulators
+Game Boy ROMs contain an embedded meta-data header which (usually) indicates the type of MBC (Memory Bank Controller) used. This allows emulators to automatically emulate the correct cart hardware (the Game Boy hardware itself ignores this and doesn't need it since the cart hardware is present). 
+
+OEM Mega Duck ROMs lack this header which means that emulators have to use other methods to infer what type of cart MBC is required by a given ROM.
+
+The main methods for selecting the right MegaDuck cart MBC:
+- By File Extension (`.md1` = 32K banks, `.md2` = Upper 16K Banks, `.bin` = 32k no mbc)
+  - Analogue Pocket OpenFPGA MegaDuck Core
+- By hashes of the ROMs
+  - MAME (partially)
+- By emulating both MBC styles at the same time in case a game uses either. This works since the two MBCs use a different register address.
+  - MAME (partially), MiSTer
+
+
+### Display mod / LCD Header info
+- [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
+- [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
+
+### Laptop model Gamepad
+- [Info for building a replacement Gamepad / "Mouse"](/docs/Quique_gamepad.md) for the MegaDuck Laptop model
+
+### Serial Link Port
+- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
+- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
   
-#### Cartridge Pinout
+### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
 - Scans:
   - OEM (Pile Wonder) [Front](/assets/megaduck_cartridge_oem_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_oem_1200dpi_back.jpg)
   - IG 32K  [Front](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_back.jpg)
 
-#### AC Adapter for Super QuiQue Laptop
+### AC Adapter for Super QuiQue Laptop
 - An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity. [Picture](/assets/megaduck_super_quique_laptop_universal_ac_adapter_9v.jpg).
 
 # System ROMs
