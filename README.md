@@ -1,5 +1,5 @@
 # Mega Duck / Cougar Boy Console Info
-A collection of technical information and resources for the Mega Duck console brought together in one place.
+A collection of technical information and resources for the Mega Duck console brought together in one place. Much of it researched by others, some by me (minor sound reg fixes, laptop model docs, some ports and patches, etc).
 
 [Web version](https://bbbbbr.github.io/megaduck-info/)
 
