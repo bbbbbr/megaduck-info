@@ -1,10 +1,13 @@
 # Mega Duck / Cougar Boy Console Info
 A collection of technical information and resources for the Mega Duck console brought together in one place.
 
-## References
-...
-
 [Web version](https://bbbbbr.github.io/megaduck-info/)
+
+## References
+- [Sean Riddle](https://www.seanriddle.com/megaduck.html)
+- MAME: [1](https://github.com/mamedev/mame/blob/cd2b19164f38de66ff2e0f3b2f923b1abab598dd/src/devices/bus/gameboy/mdslot.cpp) [2](https://github.com/mamedev/mame/blob/ac3c4190eeb647596523182572e535424106421c/src/devices/bus/gameboy/rom.cpp) [3](https://github.com/mamedev/mame/blob/cd2b19164f38de66ff2e0f3b2f923b1abab598dd/hash/megaduck.xml)
+- [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/blob/4b06b6600683cf6b8b242d00c75baab160cd61ee/rtl/megaswizzle.sv)
+
 
 # Software
 
