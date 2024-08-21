@@ -33,7 +33,7 @@ A collection of technical information and resources for the Mega Duck console br
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 #### Peripherals
-- [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. 
+- [Mega Duck Laptop GBDK Examples](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples) Sample code for interfacing with the MegaDuck Laptop model hardware (Quique and Junior Computer), such as the keyboard. See related partial [docs](https://github.com/bbbbbr/megaduck-quique-disasm/blob/main/docs/Megaduck%20Quique%20info.md).
 
 ### Homebrew Music Tools
 - [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
