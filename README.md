@@ -135,6 +135,7 @@ Programming:
  - Cartridge Header data: not present on Mega Duck
    - Checksum header: not present on Mega Duck. **Do not apply checksum to ROM** after building as on the Game Boy
  - Program Entry Point: `0x0000` (on Game Boy: `0x0100` )
+ - Initial registers (AF, BC, DE, HL, SP) are random at startup (due to lack of boot rom) with some affinity toward 0xFFFF/0x0000
  - Display registers address and flag definitions: Some changed (details below)
  - VRAM data:
    - The user program should clear it before use.
