@@ -135,7 +135,12 @@ Programming:
  - Cartridge Header data: not present on Mega Duck
    - Checksum header: not present on Mega Duck. **Do not apply checksum to ROM** after building as on the Game Boy
  - Program Entry Point: `0x0000` (on Game Boy: `0x0100` )
- - Initial registers (AF, BC, DE, HL, SP) are random at startup (due to lack of boot rom) with some affinity toward 0xFFFF/0x0000
+ - Initial registers
+   - Handheld Models: (`AF, BC, DE, HL, SP`) are random at startup (due to lack of boot rom) with some affinity toward `0xFFFF` / `0x0000`
+   - Laptop Model: Based on System ROM design (no stack init before first call/ret) it appears SP is NOT `0x0000` at power-on
+     - Possibly it's something like 0xFFFE or lower which would allow pushing and popping the stack before init without a resulting crash
+ - Serial control
+   - Laptop Mode: Based on System ROM design and behavior it seems possible to use SC and SB reg outside normal GB guidelines (Sending still works when triggering SC to send **before** loading the send value into SB).
  - Display registers address and flag definitions: Some changed (details below)
  - VRAM data:
    - The user program should clear it before use.
