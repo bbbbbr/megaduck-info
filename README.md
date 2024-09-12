@@ -40,8 +40,10 @@ A collection of technical information and resources for the Mega Duck console br
 - [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
 
 ### ROM Patches
+Patches for running Game Boy games on the MegaDuck
 - [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
-- [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris so it runs on the Mega Duck
+- [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris
+- [Patch](https://bbbbbr.itch.io/mega-duck-patch-for-super-mario-land-game-boy) for Game Boy Super Mario Land
 - [Patch](https://bbbbbr.itch.io/megaduck-patch-fydos-magic-tiles) for Game Boy [Fydo's Magic Tiles](https://ohnotomsutton.itch.io/fydos-magic-tiles)
 
 # Hardware
@@ -92,6 +94,7 @@ The main methods for selecting the right MegaDuck cart MBC:
 
 
 ### Display mod / LCD Header info
+- [Display adapter board by zwenergy](https://github.com/zwenergy/MegaDuck-GB-IPS-Adapter) for Game Boy DMG style display kits
 - [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
 - [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
 
