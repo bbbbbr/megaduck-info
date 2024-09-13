@@ -17,7 +17,7 @@ A collection of technical information and resources for the Mega Duck console br
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
 - [SystemofLever's GB Fireplace](https://github.com/bbbbbr/gb_fireplace_megaduck) ported for the MegaDuck
 - [MWehrstedt's Max Pirate](https://github.com/bbbbbr/MaxPirate_megaduck/tree/megaduck/build/duck) ported for the MegaDuck
-- [Nitro2k's whichboot.gb](https://github.com/bbbbbr/whichboot_duck.duck) ported for the MegaDuck
+- [Nitro2k's whichboot.gb](https://github.com/bbbbbr/whichboot.duck) ported for the MegaDuck
 
 ### Emulators/FPGA Re-implementations
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
