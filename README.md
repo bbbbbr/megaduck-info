@@ -12,6 +12,9 @@ A collection of technical information and resources for the Mega Duck console br
 # Software
 
 ### Homebrew Games / Programs
+- See the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/)
+
+Individual Links:
 - Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
   - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
 - [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
@@ -41,6 +44,9 @@ A collection of technical information and resources for the Mega Duck console br
 
 ### ROM Patches
 Patches for running Game Boy games on the MegaDuck
+- See the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/)
+
+Individual Links:
 - [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
 - [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris
 - [Patch](https://bbbbbr.itch.io/mega-duck-patch-for-super-mario-land-game-boy) for Game Boy Super Mario Land
