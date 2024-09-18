@@ -8,6 +8,8 @@ A collection of technical information and resources for the Mega Duck console br
 - MAME: [1](https://github.com/mamedev/mame/blob/cd2b19164f38de66ff2e0f3b2f923b1abab598dd/src/devices/bus/gameboy/mdslot.cpp) [2](https://github.com/mamedev/mame/blob/ac3c4190eeb647596523182572e535424106421c/src/devices/bus/gameboy/rom.cpp) [3](https://github.com/mamedev/mame/blob/cd2b19164f38de66ff2e0f3b2f923b1abab598dd/hash/megaduck.xml)
 - [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/blob/4b06b6600683cf6b8b242d00c75baab160cd61ee/rtl/megaswizzle.sv)
 
+## Credits / Thanks
+Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets
 
 # Software
 
@@ -60,6 +62,35 @@ Individual Links:
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
+### Display mod / LCD Header info
+- [Display adapter board by zwenergy](https://github.com/zwenergy/MegaDuck-GB-IPS-Adapter) for Game Boy DMG style display kits
+- [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
+  - [3D printable bracket for the DMG IPS display](https://www.thingiverse.com/thing:6590836)
+- [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
+
+### Laptop model Gamepad
+- [Info for building a replacement Gamepad / "Mouse"](/docs/Quique_gamepad.md) for the MegaDuck Laptop model
+
+### Serial Link Port
+- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
+- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
+
+### Cartridge Pinout
+- [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
+- Scans:
+  - OEM (Pile Wonder) [Front](/assets/megaduck_cartridge_oem_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_oem_1200dpi_back.jpg)
+  - IG 32K  [Front](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_back.jpg)
+
+### AC Adapter
+Handheld
+  - 3.5 mm exterior, 1.35mm interior
+  - 6 volts, centrer NEGATIVE polarity
+
+Laptop
+  - 3.5 mm exterior, 1.35mm interior
+  - 9 volts, centrer POSITIVE polarity
+  - [Example picture](/assets/megaduck_super_quique_laptop_universal_ac_adapter_9v.jpg)
+
 ### MBCs / Bank Switching
 
 #### MBC Controllers
@@ -97,29 +128,7 @@ The main methods for selecting the right MegaDuck cart MBC:
   - MAME (partially)
 - By emulating both MBC styles at the same time in case a game uses either. This works since the two MBCs use a different register address.
   - MAME (partially), MiSTer
-
-
-### Display mod / LCD Header info
-- [Display adapter board by zwenergy](https://github.com/zwenergy/MegaDuck-GB-IPS-Adapter) for Game Boy DMG style display kits
-- [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
-- [Game Boy Pocket (MGB) to Mega Duck display adapter](/assets/Diagram_Game_Boy_Pocket_MGB_to_Mega_Duck_to_display_adapter.jpg)
-
-### Laptop model Gamepad
-- [Info for building a replacement Gamepad / "Mouse"](/docs/Quique_gamepad.md) for the MegaDuck Laptop model
-
-### Serial Link Port
-- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
-- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
   
-### Cartridge Pinout
-- [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
-- Scans:
-  - OEM (Pile Wonder) [Front](/assets/megaduck_cartridge_oem_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_oem_1200dpi_back.jpg)
-  - IG 32K  [Front](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_back.jpg)
-
-### AC Adapter for Super QuiQue Laptop
-- An AC Adapter that worked is: ~3.45mm exterior, ~1.15mm interior, 9 volts central positive polarity. [Picture](/assets/megaduck_super_quique_laptop_universal_ac_adapter_9v.jpg).
-
 # System ROMs
 - Handheld Model: No System/Boot ROM
 - CEFA Toys Super Quique Laptop Model: [Partial disassembly of the System ROM](https://github.com/bbbbbr/megaduck-quique-disasm/)
@@ -156,9 +165,18 @@ Programming:
    - For Handhelds: since a boot ROM does not run on startup it means Tile Map and Pattern data are not cleared and will have (consistent) random data.
     - For Laptop models: The System ROM will not clear VRAM before launching a user program from the system menu. The font patterns left in VRAM on program startup can be used to tell the difference between the Super Quique (Spanish) and Super Junior (German) laptop models. See [example code](https://github.com/bbbbbr/megaduck_laptop_gbdk_examples/blob/main/megaduck_keyboard/src/megaduck_model.c).
   - Audio registers address and flag definitions: Some changed (details below)
-  - MBC ROM bank switching register address: `0x0001` (many Game Boy MBCs use `0x2000 - 0x3FFF`)
-    - TODO: Laptop model system ROM
+  - Different MBC bank switching register addresses than Game Boy MBCs
 
+Laptop:
+  - Built-in System ROM
+  - Additional Cart Slot for add-on Memory Card (access not yet documented)
+  - Peripherals attached via Serial/Link port
+    - Keyboard + Piano Keys
+    - RTC
+    - Cart
+    - Detached Gamepad
+    - Mechanism to launch cartridges in the Cart Slot
+    - External communication port for the printer (type not yet documented)
 
 ### Sound Register Value/Data Changes
 These changes should be kept in mind when porting Sound Effects and Music Drivers written for the Game Boy.
