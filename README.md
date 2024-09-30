@@ -25,9 +25,11 @@ Individual Links:
 - [Nitro2k's whichboot.gb](https://github.com/bbbbbr/whichboot.duck) ported for the MegaDuck
 
 ### Emulators/FPGA Re-implementations
+- [Super Junior SameDuck](https://github.com/bbbbbr/SuperJuniorSameDuck): Fork of SameBoy with support for MegaDuck Handheld and Laptop models. Has correct audio emulation. Development oriented.
+  
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
 - [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
-- [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168) at present the only one with all known audio register changes integrated, so that music and sfx play correctly
+- [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168): Has correct audio emulation
 - [Analogue Pocket OpenFPGA core](https://github.com/spiritualized1997/openFPGA-Megaduck)
 
 ### Development Tools
