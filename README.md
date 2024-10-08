@@ -9,7 +9,8 @@ A collection of technical information and resources for the Mega Duck console br
 - [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/blob/4b06b6600683cf6b8b242d00c75baab160cd61ee/rtl/megaswizzle.sv)
 
 ## Credits / Thanks
-Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets
+Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, Kuddel
+
 
 # Software
 
@@ -32,7 +33,9 @@ Individual Links:
 - [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168): Has correct audio emulation
 - [Analogue Pocket OpenFPGA core](https://github.com/spiritualized1997/openFPGA-Megaduck)
 
+
 ### Development Tools
+
 #### SDKs / Build related
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
 - [hardware.inc for MegaDuck](https://github.com/bbbbbr/hUGEDriver/blob/uncap_megaduck/include/hardware.inc): Hardware constants and addresses for use with asm/RGBDS
@@ -41,7 +44,9 @@ Individual Links:
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 #### Peripherals
-- [Mega Duck Laptop GBDK Examples](https://github.com/gbdk-2020/gbdk-2020/tree/develop/gbdk-lib/examples/megaduck) Sample code for interfacing with the MegaDuck Laptop model Keyboard and RTC (Quique and Junior Computer). See related partial [docs](https://github.com/bbbbbr/megaduck-quique-disasm/blob/main/docs/Megaduck%20Quique%20info.md).
+- [Mega Duck Laptop GBDK Examples](https://github.com/gbdk-2020/gbdk-2020/tree/develop/gbdk-lib/examples/megaduck) Sample code for interfacing with the MegaDuck Laptop model Keyboard and RTC (Quique and Junior Computer). See related partial [docs](https://github.com/bbbbbr/megaduck-quique-disasm/blob/main/docs/Megaduck%20Quique%20info.md)
+- [Audio recordings](https://github.com/bbbbbr/megaduck-info/tree/main/assets/laptop_speech/) of the 6 built-in speech phrases for the German and Spanish MegaDuck Laptop models
+
 
 ### Homebrew Music Tools
 - [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
@@ -55,6 +60,7 @@ Individual Links:
 - [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris
 - [Patch](https://bbbbbr.itch.io/mega-duck-patch-for-super-mario-land-game-boy) for Game Boy Super Mario Land
 - [Patch](https://bbbbbr.itch.io/megaduck-patch-fydos-magic-tiles) for Game Boy [Fydo's Magic Tiles](https://ohnotomsutton.itch.io/fydos-magic-tiles)
+
 
 # Hardware
 
@@ -83,7 +89,7 @@ Individual Links:
   - OEM (Pile Wonder) [Front](/assets/megaduck_cartridge_oem_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_oem_1200dpi_back.jpg)
   - IG 32K  [Front](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_front.jpg) / [Back](/assets/megaduck_cartridge_insidegadgets32k_1200dpi_back.jpg)
 
-### AC Adapter
+### AC Adapters
 Handheld
   - 3.5 mm exterior, 1.35mm interior
   - 6 volts, centrer NEGATIVE polarity
@@ -130,11 +136,13 @@ The main methods for selecting the right MegaDuck cart MBC:
   - MAME (partially)
 - By emulating both MBC styles at the same time in case a game uses either. This works since the two MBCs use a different register address.
   - MAME (partially), MiSTer
-  
+
+
 # System ROMs
 - Handheld Model: No System/Boot ROM
 - CEFA Toys Super Quique Laptop Model: [Partial disassembly of the System ROM](https://github.com/bbbbbr/megaduck-quique-disasm/)
 - Hartung Super Junior Computer: ...
+
 
 # Porting from Game Boy to Mega Duck
 Developing for the Mega Duck is mostly identical (cpu & integrated peripherals) to the Original Game Boy though it has a couple changes listed below.
