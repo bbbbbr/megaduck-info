@@ -14,16 +14,9 @@ Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, 
 
 # Software
 
-### Homebrew Games / Programs
-- See the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/)
-
-Individual Links:
-- Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
-  - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
-- [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
-- [SystemofLever's GB Fireplace](https://github.com/bbbbbr/gb_fireplace_megaduck) ported for the MegaDuck
-- [MWehrstedt's Max Pirate](https://github.com/bbbbbr/MaxPirate_megaduck/tree/megaduck/build/duck) ported for the MegaDuck
-- [Nitro2k's whichboot.gb](https://github.com/bbbbbr/whichboot.duck) ported for the MegaDuck
+### Homebrew Games / ROM Hacks/ Programs
+- Browse releases (and find source code links) on the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/).
+  - There's also a view for [showing what's new](https://bbbbbr.github.io/megaduck-gallery/?sortSelector=Recently+Added)
 
 ### Emulators/FPGA Re-implementations
 - [Super Junior SameDuck](https://github.com/bbbbbr/SuperJuniorSameDuck): Fork of SameBoy with support for MegaDuck Handheld and Laptop models. Has correct audio emulation. Development oriented.
