@@ -15,15 +15,16 @@ Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, 
 # Software
 
 ### Homebrew Games / Programs
-- See the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/)
+- Browse releases (and find source code links) on the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/).
+  - There's also a view for [showing what's new](https://bbbbbr.github.io/megaduck-gallery/?sortSelector=Recently+Added)
 
-Individual Links:
-- Toxa's [Port](https://github.com/untoxa/BlackCastle) of 0x7f's Black Castle to the Mega Duck
-  - [32K version](https://github.com/bbbbbr/BlackCastle) that fits on Inside Gadgets 32K cart
-- [Mega Duck games](https://itch.io/c/2884652/mega-duck-console-homebrew-roms) collection on itch.io
-- [SystemofLever's GB Fireplace](https://github.com/bbbbbr/gb_fireplace_megaduck) ported for the MegaDuck
-- [MWehrstedt's Max Pirate](https://github.com/bbbbbr/MaxPirate_megaduck/tree/megaduck/build/duck) ported for the MegaDuck
-- [Nitro2k's whichboot.gb](https://github.com/bbbbbr/whichboot.duck) ported for the MegaDuck
+### ROM Patches
+Patches for running Game Boy games on the MegaDuck
+- See ROM patches in the [MegaDuck Homebrew and ROM Hack showcase](bbbbbr.github.io/megaduck-gallery/index.html?softwareTags=ROM+Hack)
+
+### Homebrew Music Tools
+- [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
+
 
 ### Emulators/FPGA Re-implementations
 - [Super Junior SameDuck](https://github.com/bbbbbr/SuperJuniorSameDuck): Fork of SameBoy with support for MegaDuck Handheld and Laptop models. Has correct audio emulation. Development oriented.
@@ -48,24 +49,11 @@ Individual Links:
 - [Audio recordings](https://github.com/bbbbbr/megaduck-info/tree/main/assets/laptop_speech/) of the 6 built-in speech phrases for the German and Spanish MegaDuck Laptop models
 
 
-### Homebrew Music Tools
-- [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
-
-### ROM Patches
-Patches for running Game Boy games on the MegaDuck
-- See the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/)
-
-Individual Links:
-- [Patch](http://blog.rarit.ee/2023/02/puzzle-game-archeology-or-idiot-duck.html) for the Mega Duck Dice Block game to disable the timer
-- [Patch](https://github.com/bbbbbr/megaduck-tetris-patch) for Game Boy Tetris
-- [Patch](https://bbbbbr.itch.io/mega-duck-patch-for-super-mario-land-game-boy) for Game Boy Super Mario Land
-- [Patch](https://bbbbbr.itch.io/megaduck-patch-fydos-magic-tiles) for Game Boy [Fydo's Magic Tiles](https://ohnotomsutton.itch.io/fydos-magic-tiles)
-
-
 # Hardware
 
 ### Flash Cartridges
 - [picoDuck by zwenergy](https://github.com/zwenergy/picoDuck) an Open-source RP2040-based flash cart
+  - [Alternate firmware](https://github.com/bbbbbr/picoDuck/releases/tag/1MB_MD2_only_v1.0) which supports up to 1MB ROMs with the MD2 (only) type MBC (required for some homebrew and rom patches)
 - [A2 Heaven multi-flash cart](http://www.a2heaven.com/webshop/index.php?rt=product/product&product_id=172)
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
