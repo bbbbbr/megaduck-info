@@ -20,7 +20,7 @@ Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, 
 
 ### ROM Patches
 Patches for running Game Boy games on the MegaDuck
-- See ROM patches in the [MegaDuck Homebrew and ROM Hack showcase](bbbbbr.github.io/megaduck-gallery/index.html?softwareTags=ROM+Hack)
+- See ROM patches in the [MegaDuck Homebrew and ROM Hack showcase](https://bbbbbr.github.io/megaduck-gallery/index.html?softwareTags=ROM+Hack)
 
 ### Homebrew Music Tools
 - [Droneboy for MegaDuck](https://github.com/bbbbbr/Droneboy_MegaDuck)
