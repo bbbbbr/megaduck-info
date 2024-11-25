@@ -91,6 +91,7 @@ Laptop
 
 #### MBC Controllers
 **Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer):**
+  - Informal MBC Number: `0xE0` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing (`0 - 15`) to `0x1000`. * (Bank num starting with 0 needs to be re-checked)
   - Bank Size/Region: Switches the full 32K ROM region
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
@@ -101,11 +102,13 @@ Laptop
   - Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
 - 32K switchable banks
   - Sometimes with extension: `.md1`
+  - Informal MBC Number: `0xE1` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing `0 - 1` to `0xB000`
   - Bank Size/Region: Switches the full 32K ROM region
   - Games: Puppet Knight, Suleiman’s Treasure
 - Upper switchable 16K banks
   - Sometimes with extension: `.md2`
+  - Informal MBC Number: `0xE2` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing `1 - 3` or `1-7` to `0x0001` depending on total ROM size (64K or 128K)
   - Bank Size/Region: 16K in the Upper ROM region `0x4000 - 0x7FFF` (lower 16K at `0x0000 - 0x3FFF` is fixed bank 0)
   - Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
@@ -247,3 +250,4 @@ These changes should be kept in mind when porting Sound Effects and Music Driver
 | OBP1     | 0xFF49   | 0xFF15    |
 | WY       | 0xFF4A   | 0xFF16    |
 | WX       | 0xFF4B   | 0xFF17    |
+
