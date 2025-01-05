@@ -38,9 +38,17 @@ Patches for running Game Boy games on the MegaDuck
 ### Development Tools
 
 #### SDKs / Build related
+
+##### C language
 - [GBDK-2020](https://github.com/gbdk-2020/gbdk-2020): C dev kit, supports Mega Duck as a build target
+- [Cate83](https://github.com/inufuto/Cate) - A C-like programming language compiler for sm83 cpus (MegaDuck, Game Boy)
+  - There are [several example game programs](https://github.com/inufuto/Cate_examples/tree/main/megaduck) for the MegaDuck
+
+##### ASM
 - [hardware.inc for MegaDuck](https://github.com/bbbbbr/hUGEDriver/blob/uncap_megaduck/include/hardware.inc): Hardware constants and addresses for use with asm/RGBDS
-  - Newer [hardware.inc](https://github.com/bbbbbr/hUGEDriver/blob/master_megaduck/include/hardware.inc) base version   
+  - Newer [hardware.inc](https://github.com/bbbbbr/hUGEDriver/blob/master_megaduck/include/hardware.inc) base version
+- [Asm83](https://github.com/inufuto/asm8) - An Assembler, linker and librarian for retro CPUs including the sm83 (MegaDuck, Game Boy)
+
 #### Music / SFX
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
