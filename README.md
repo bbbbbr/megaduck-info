@@ -53,7 +53,9 @@ Patches for running Game Boy games on the MegaDuck
 - [Mega Duck port of the hUGE Driver](https://github.com/bbbbbr/hUGEDriver) Game Boy music driver
 - [Mega Duck port of the CBTFX](https://github.com/bbbbbr/CBT-FX) Game Boy Sound FX driver
 #### Peripherals
-- [Mega Duck Laptop GBDK Examples](https://github.com/gbdk-2020/gbdk-2020/tree/develop/gbdk-lib/examples/megaduck) Sample code for interfacing with the MegaDuck Laptop model Keyboard and RTC (Quique and Junior Computer). See related partial [docs](https://github.com/bbbbbr/megaduck-quique-disasm/blob/main/docs/Megaduck%20Quique%20info.md)
+- Sample code for interfacing with the MegaDuck Laptop model Keyboard, RTC and speech module (Quique and Junior Computer). See related partial [docs](https://github.com/bbbbbr/megaduck-quique-disasm/blob/main/docs/Megaduck%20Quique%20info.md)
+  - [GBDK examples](https://github.com/gbdk-2020/gbdk-2020/tree/develop/gbdk-lib/examples/megaduck) 
+  - [RGBDS asm examples](https://github.com/bbbbbr/megaduck_laptop_asm_examples)
 - [Audio recordings](https://github.com/bbbbbr/megaduck-info/tree/main/assets/laptop_speech/) of the 6 built-in speech phrases for the German and Spanish MegaDuck Laptop models
 
 
