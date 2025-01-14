@@ -102,8 +102,14 @@ Laptop
 #### MBC Controllers
 **Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer):**
   - Informal MBC Number: `0xE0` (SuperJuniorSameDuck emulator)
-  - Register: Bank selected by writing (`0 - 15`) to `0x1000`. * (Bank num starting with 0 needs to be re-checked)
-  - Bank Size/Region: Switches the full 32K ROM region
+  - Informal extension: `.md0`
+  - Register: `0x1000`
+    - ROM Bank
+      - Selected by writing (`0 - 15`) in Lower Nibble (mask `0x0F`)
+      - Bank Size/Region: Switches the full 32K ROM region- 
+    - External plug-in Memory Cart SRAM Bank
+      - Selected by writing (`0 - 3`) in Upper Nibble (mask `0x30`)
+      - Bank Size/Region: 8k mapped at `0xA000 - 0xBFFF`
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
 
 **OEM Games:**
