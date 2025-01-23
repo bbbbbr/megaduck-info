@@ -68,6 +68,9 @@ Patches for running Game Boy games on the MegaDuck
 - [Inside Gadgets 32K flash cart](https://shop.insidegadgets.com/product/megaduck-32kb-flash-cart/) - Compatible with [GBXCart flasher](https://www.gbxcart.com/)
 - [3D Printable cartridge shell](https://github.com/bbbbbr/megaduck_cartridge_shell)
 
+### USB Video Streaming
+- [MegaDuck Interceptor](https://github.com/bbbbbr/megaduck-interceptor) Modified firmware for the [GB Interceptor](https://github.com/Staacks/gbinterceptor) which allows it to work with a MegaDuck. The device streams emulated video from the console over USB. Requires cart slot adapter for the device to connect to the MegaDuck.
+
 ### Display mod / LCD Header info
 - [Display adapter board by zwenergy](https://github.com/zwenergy/MegaDuck-GB-IPS-Adapter) for Game Boy DMG style display kits
 - [Ruud van Falier's DMG IPS adapter mod](https://hackaday.io/project/191431-mega-duck-aka-cougarboy-ips-screen-mod)
