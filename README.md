@@ -113,9 +113,10 @@ Laptop
     - ROM Bank
       - Selected by writing (`0 - 15`) in Lower Nibble (mask `0x0F`)
       - Bank Size/Region: Switches the full 32K ROM region- 
-    - External plug-in Memory Cart SRAM Bank
+    - SRAM Bank (on secondary memory cart plugged into memory cart slot)
       - Selected by writing (`0 - 3`) in Upper Nibble (mask `0x30`)
       - Bank Size/Region: 8k mapped at `0xA000 - 0xBFFF`
+  - Games/Programs: Laptop System ROM, Bilder Lexikon, DataBank (requires SRAM cart)
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
 
 **OEM Games:**
