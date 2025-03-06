@@ -9,7 +9,7 @@ A collection of technical information and resources for the Mega Duck console br
 - [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/blob/4b06b6600683cf6b8b242d00c75baab160cd61ee/rtl/megaswizzle.sv)
 
 ## Credits / Thanks
-Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, Kuddel
+Sean Riddle, Ruud van Falier, Nitro2k, Toxa, Youkal3, Zwenergy, Inside Gadgets, Kuddel, ManCloud
 
 
 # Software
