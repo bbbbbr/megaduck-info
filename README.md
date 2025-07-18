@@ -88,6 +88,7 @@ Patches for running Game Boy games on the MegaDuck
 - The serial control registers have the same address, control flags and behavior as a the Game Boy
 
 With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports.
+- [Breakout board for Game Boy style link port cable receptacle](https://www.tindie.com/products/vaguilar/link-port-breakout-board-gameboy-coloradvancesp/)
 
 Diagram showing the link port <ins>receptacle</ins>*1 pinout when looking at the side of the console:
 
