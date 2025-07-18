@@ -84,8 +84,30 @@ Patches for running Game Boy games on the MegaDuck
 - [Info for building a replacement Gamepad / "Mouse"](/docs/Quique_gamepad.md) for the MegaDuck Laptop model
 
 ### Serial Link Port
-- The link port has a different conenctor style (bare header) than the Game Boy, but the pin order and signals appear to be the same. With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports. Catskull has [Game Boy link port parts](https://catskullelectronics.com/collections/game-boy/products/gba-gbc-link-port) that can be used to build an adapter.
-- The serial link registers appear to have the same address, control flags and behavior as a classic Game Boy
+- The link port on the Mega Duck has the same pin order and signals as the Game Boy, but a different connector style (bare header).
+- The serial control registers have the same address, control flags and behavior as a the Game Boy
+
+With the use of a connector style adapter a Mega Duck and a Game Boy can exchange data over their link ports.
+
+Diagram showing the link port <ins>receptacle</ins>*1 pinout when looking at the side of the console:
+
+```
+      Front of console
+-----------------------------------
+                                   |
+--------      -----------------    |
+ volume |    | CLK  SIN  VCC*2 |   |
+ dial   |    | GND   -   SOUT  |   |
+--------      -----------------    |
+                                   |
+-----------------------------------                                   
+       Back of console
+
+```
+- 1: View and pinout is of the connector receptacle, *not* of the cable
+- 2: For most uses the VCC pin should not be connected
+
+
 
 ### Cartridge Pinout
 - [Mega Duck Cart Dumping](https://www.seanriddle.com/megaduck.html)
