@@ -32,7 +32,7 @@ Patches for running Game Boy games on the MegaDuck
   - Has correct audio emulation
 
 - [MiSTer Game Boy/MegaDuck core](https://github.com/MiSTer-devel/Gameboy_MiSTer/):
-  - Has support for MegaDuck Handheld and Laptop models models. correct audio emulation
+  - Has support for MegaDuck Handheld and Laptop models models
   - Has correct audio emulation
   
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
