@@ -27,11 +27,16 @@ Patches for running Game Boy games on the MegaDuck
 
 
 ### Emulators/FPGA Re-implementations
-- [Super Junior SameDuck](https://github.com/bbbbbr/SuperJuniorSameDuck): Fork of SameBoy with support for MegaDuck Handheld and Laptop models. Has correct audio emulation. Development oriented.
+- [Super Junior SameDuck](https://github.com/bbbbbr/SuperJuniorSameDuck):
+  - Fork of SameBoy with support for MegaDuck Handheld and Laptop models (Development oriented)
+  - Has correct audio emulation
+
+- [MiSTer Game Boy/MegaDuck core](https://github.com/MiSTer-devel/Gameboy_MiSTer/):
+  - Has support for MegaDuck Handheld and Laptop models models. correct audio emulation
+  - Has correct audio emulation
   
 - [MAME](https://www.mamedev.org/), [Arcade DB Entry](http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=megaduck), [Cart list xml](https://github.com/mamedev/mame/blob/4a6c54dd5e4fc06ef535816fa6c2f4597d2f593f/hash/megaduck.xml#L4)
 - [SameDuck](https://github.com/LIJI32/SameBoy/compare/SameDuck) branch of SameBoy (modified version of SameBoy, not pre-built)
-- [MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer/issues/168): Has correct audio emulation
 - [Analogue Pocket OpenFPGA core](https://github.com/spiritualized1997/openFPGA-Megaduck)
 
 
@@ -142,7 +147,8 @@ Laptop
     - SRAM Bank (on secondary memory cart plugged into memory cart slot)
       - Selected by writing (`0 - 3`) in Upper Nibble (mask `0x30`)
       - Bank Size/Region: 8k mapped at `0xA000 - 0xBFFF`
-  - Games/Programs: Laptop System ROM, Bilder Lexikon, DataBank (requires SRAM cart)
+  - Games: MegaDuck_Laptop_BilderLexikon, MegaDuck_Laptop_DataBank (requires SRAM cart)
+  - System ROMs: MegaDuck_Laptop_SystemROM_German, MegaDuck_Laptop_SystemROM_Spanish
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
 
 **OEM Games:**
@@ -180,8 +186,8 @@ The main methods for selecting the right MegaDuck cart MBC:
 
 # System ROMs
 - Handheld Model: No System/Boot ROM
-- CEFA Toys Super Quique Laptop Model: [Partial disassembly of the System ROM](https://github.com/bbbbbr/megaduck-quique-disasm/)
-- Hartung Super Junior Computer: ...
+- CEFA Toys Super Quique Laptop Model (Spanish): [Partial disassembly of the System ROM](https://github.com/bbbbbr/megaduck-quique-disasm/)
+- Hartung Super Junior Computer (German)
 
 
 # Porting from Game Boy to Mega Duck
