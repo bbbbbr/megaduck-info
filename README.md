@@ -147,26 +147,27 @@ Laptop
     - SRAM Bank (on secondary memory cart plugged into memory cart slot)
       - Selected by writing (`0 - 3`) in Upper Nibble (mask `0x30`)
       - Bank Size/Region: 8k mapped at `0xA000 - 0xBFFF`
-  - Games: MegaDuck_Laptop_BilderLexikon, MegaDuck_Laptop_DataBank (requires SRAM cart)
-  - System ROMs: MegaDuck_Laptop_SystemROM_German, MegaDuck_Laptop_SystemROM_Spanish
+  - Laptop Games: MegaDuck_Laptop_BilderLexikon.md0, MegaDuck_Laptop_DataBank.md0 (requires SRAM cart)
+  - System ROMs: MegaDuck_Laptop_SystemROM_German.md0, MegaDuck_Laptop_SystemROM_Spanish.md0
   - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
 
 **OEM Games:**
 - 32K with NO switchable banks
   - Sometimes with extension: `.bin`, but that may also be used for banked ROMs with some emulators
-  - Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
+  - Handheld Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
 - 32K switchable banks
   - Sometimes with extension: `.md1`
   - Informal MBC Number: `0xE1` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing `0 - 1` to `0xB000`
   - Bank Size/Region: Switches the full 32K ROM region
-  - Games: Puppet Knight, Suleiman’s Treasure
+  - Handheld Games: Puppet Knight, Suleiman’s Treasure
 - Upper switchable 16K banks
   - Sometimes with extension: `.md2`
   - Informal MBC Number: `0xE2` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing `1 - 3` or `1-7` to `0x0001` depending on total ROM size (64K or 128K)
   - Bank Size/Region: 16K in the Upper ROM region `0x4000 - 0x7FFF` (lower 16K at `0x0000 - 0x3FFF` is fixed bank 0)
-  - Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
+  - Laptop Games: MegaDuck_Laptop_MusikModul.md2
+  - Handheld Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
 
 MBC type per game is according to [Reddit](https://www.reddit.com/r/AnaloguePocket/comments/zgmwqh/question_about_the_mega_duck_core_and_rom_file/)
 
