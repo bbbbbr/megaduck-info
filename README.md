@@ -78,6 +78,7 @@ Patches for running Game Boy games on the MegaDuck
 
 ### Adapters
 - [Adapter to plug Game Boy (flash) carts into the MegaDuck](https://github.com/bbbbbr/gb_to_megaduck_cart_adapter/)
+  - Alternate [sub board design](https://github.com/Raphael-Boichot/Megaduck-to-game-boy-camera-adapter) which has the cart sticking up instead of down
 
 ### Display mod / LCD Header info
 - [Display adapter board by zwenergy](https://github.com/zwenergy/MegaDuck-GB-IPS-Adapter) for Game Boy DMG style display kits
