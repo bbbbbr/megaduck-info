@@ -164,6 +164,7 @@ Laptop
   - Handheld Games: Puppet Knight, Suleiman’s Treasure
 - Upper switchable 16K banks
   - Sometimes with extension: `.md2`
+    - Variant of MD2 + SRAM: extension is `.md2s`
   - Informal MBC Number: `0xE2` (SuperJuniorSameDuck emulator)
   - Register: Bank selected by writing `1 - 3` or `1-7` to `0x0001` depending on total ROM size (64K or 128K)
   - Bank Size/Region: 16K in the Upper ROM region `0x4000 - 0x7FFF` (lower 16K at `0x0000 - 0x3FFF` is fixed bank 0)
