@@ -217,7 +217,8 @@ Programming:
    - Laptop Model: Based on System ROM design (no stack init before first call/ret) it appears SP is NOT `0x0000` at power-on
      - Possibly it's something like 0xFFFE or lower which would allow pushing and popping the stack before init without a resulting crash
  - Serial control
-   - Laptop Mode: Based on System ROM design and behavior it seems possible to use SC and SB reg outside normal GB guidelines (Sending still works when triggering SC to send **before** loading the send value into SB).
+   - Laptop Mode: Some Game Boy emulators do not support triggering SC to send **before** loading the send value into SB, however this is a design pattern that the Laptop System ROM uses to interface with the hardware. So it needs to be implemented to more closely follow the hardware (same for Game Boy).
+   - For Super Junior SameDuck it is implemented as follows: Writing 0x81 to SC -> Resets serial master clock=low, Does *NOT* clock the first bit immediately. Instead waits for serial_master_clock to complete a full low->hi->low transition before the first bit gets clocked on negative edge.
  - Display registers address and flag definitions: Some changed (details below)
  - VRAM data:
    - The user program should clear it before use.
