@@ -137,39 +137,67 @@ Laptop
 
 ### MBCs / Bank Switching
 
-#### MBC Controllers
-**Laptop model System ROM MBC (CEFA Super Quique, Hartung Super Junior Computer):**
-  - Informal MBC Number: `0xE0` (SuperJuniorSameDuck emulator)
-  - Informal extension: `.md0`
-  - Register: `0x1000`
-    - ROM Bank
-      - Selected by writing (`0 - 15`) in Lower Nibble (mask `0x0F`)
-      - Bank Size/Region: Switches the full 32K ROM region- 
-    - SRAM Bank (on secondary memory cart plugged into memory cart slot)
-      - Selected by writing (`0 - 3`) in Upper Nibble (mask `0x30`)
-      - Bank Size/Region: 8k mapped at `0xA000 - 0xBFFF`
-  - Laptop Games: MegaDuck_Laptop_BilderLexikon.md0, MegaDuck_Laptop_DataBank.md0 (requires SRAM cart)
-  - System ROMs: MegaDuck_Laptop_SystemROM_German.md0, MegaDuck_Laptop_SystemROM_Spanish.md0
-  - Note: Uses a delay of ~41 M-Cycles (executed from WRAM) after writing the bank switch before resuming execution from ROM. Unclear if required.
+| Extension      | Informal # | Switchable ROM Bank   | Max  | ROM Bank Range | SRAM Bank | Max  | SRAM Bank Range | SRAM Reg Style |
+| -------------- | ---------- | --------------------- | ---- | -------------- | --------- | ---- | --------------- | -------------- |
+| `.duck`,`.bin` |            | fixed                 | 32K  |                | none      | 0    |                 |                |
+| `.md0`         | `0xE0`     | 32K (`0x0000-0x7FFF`) | 512K | 0 - 15         | 8K        | 32K  | 0 - 3           | MD0            |
+| `.md1`         | `0xE1`     | 32K (`0x0000-0x7FFF`) | 64K  | 0 - 1          | none      | 0    |                 |                |
+| `.md2`         | `0xE2`     | 16K (`0x4000-0x7FFF`) | 256K | 1-3 or 1-7     | none      | 0    |                 |                |
+| `.md20s`       | `0xE3`     | 16K (`0x4000-0x7FFF`) | 4MB  | 1 - 255        | 8K        | 32K  | 0 - 3           | MD0            |
+| `.md25s`       | `0xE4`     | 16K (`0x4000-0x7FFF`) | 4MB  | 1 - 255        | 8K        | 128K | 0 - 15          | MBC5           |
 
-**OEM Games:**
-- 32K with NO switchable banks
-  - Sometimes with extension: `.bin`, but that may also be used for banked ROMs with some emulators
-  - Handheld Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
-- 32K switchable banks
-  - Sometimes with extension: `.md1`
-  - Informal MBC Number: `0xE1` (SuperJuniorSameDuck emulator)
-  - Register: Bank selected by writing `0 - 1` to `0xB000`
-  - Bank Size/Region: Switches the full 32K ROM region
-  - Handheld Games: Puppet Knight, Suleiman’s Treasure
-- Upper switchable 16K banks
-  - Sometimes with extension: `.md2`
-    - Variant of MD2 + SRAM: extension is `.md2s`
-  - Informal MBC Number: `0xE2` (SuperJuniorSameDuck emulator)
-  - Register: Bank selected by writing `1 - 3` or `1-7` to `0x0001` depending on total ROM size (64K or 128K)
-  - Bank Size/Region: 16K in the Upper ROM region `0x4000 - 0x7FFF` (lower 16K at `0x0000 - 0x3FFF` is fixed bank 0)
+#### MD0
+  - Extension: `.md0`
+  - Informal MBC: `0xE0`
+  - Register: `0x1000`
+    - ROM Bank: Write `0 - 15` in Lower Nibble (mask `0x0F`), switches full 32K ROM region
+    - SRAM Bank: Write (`0 - 3`) in Upper Nibble (mask `0x30`), 8K banks at `0xA000 - 0xBFFF`, No SRAM enable
+      - Note: SRAM is a secondary cart in memory cart slot
+  - Games/Programs: Laptop System ROM, Bilder Lexikon, DataBank (requires SRAM cart)
+  - Laptop Games: MegaDuck_Laptop_BilderLexikon.md0, MegaDuck_Laptop_DataBank.md0
+  - System ROMs: MegaDuck_Laptop_SystemROM_German.md0, MegaDuck_Laptop_SystemROM_Spanish.md0
+  - Games: Duck Duck Wordyl
+  - Note: Delay of ~41 M-Cycles used (executed from WRAM) after writing bank switch before resuming execution in ROM. Unclear if required.
+
+#### No MBC
+  - Extension: `.duck`, `.bin`
+  - 32K with NO switchable banks
+  - No SRAM
+  - Extension `.bin` is used for banked ROMs with some emulators
+  - Games: Arctic Zone, Bomb Disposer, Magic Maze, Pile Wonder, Street Rider, The Brick Wall, Trap and Turn, Vex 
+
+#### MD1
+  - Extension: `.md1`
+  - Informal MBC: `0xE1`
+  - ROM Bank Register: `0xB000`, Write `0 - 1`, switches full 32K ROM region at (`0x0000 - 0x7FFF`) 
+  - No SRAM
+  - Games: Puppet Knight, Suleiman’s Treasure
+
+#### MD2
+  - Extension: `.md2`
+  - Informal MBC: `0xE2`
+  - ROM Bank Register: `0x0001`, Write `1 - 3` or `1 - 7`, switches upper 16K ROM at `0x4000 - 0x7FFF`
+  - Fixed 16K lower bank 0 at `0x0000 - 0x3FFF`
+  - No SRAM
   - Laptop Games: MegaDuck_Laptop_MusikModul.md2
-  - Handheld Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
+  - Games: 2nd Space, Ant Soldiers, Armour Force, Beast Fighter, Black Forest Tale, Captain Knick Knack, Commin Five in One, Duck Adventures, Four in One, Magic Tower, Railway, Snake Roy, Worm Visitor, Zipball
+
+#### MD20S
+  - Like `MD2`, but with the MD0 SRAM memory cart plugged in to the laptop
+  - Extension: `.md20s`
+  - Informal MBC: `0xE3`
+  - Additional Register:
+    - SRAM Bank: `0x1000`, Write (`0 - 3`) in Upper Nibble (mask `0x30`), 8K banks at `0xA000 - 0xBFFF`, No SRAM enable
+  - Games: QR-Paint, Workboy (rom patch)
+
+#### MD25S
+  - Like `MD2`, but with the MBC5 SRAM memory
+  - Extension: `.md25s`
+  - Informal MBC: `0xE4`
+  - Additional Registers:
+    - SRAM Bank: `0x4000`, Write (`0 - 15`) 8K banks at `0xA000 - 0xBFFF`
+    - SRAM Enable: `0x0000`, Write `0x0A` to enable SRAM, other values to disable SRAM
+  - Games: Pokemon Red/Blue (rom patch)   
 
 MBC type per game is according to [Reddit](https://www.reddit.com/r/AnaloguePocket/comments/zgmwqh/question_about_the_mega_duck_core_and_rom_file/)
 
